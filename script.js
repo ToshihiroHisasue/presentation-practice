@@ -83,31 +83,6 @@ toggleTranscriptBtn.addEventListener('click', () => {
     toggleTranscriptBtn.textContent = transcriptContent.classList.contains('hidden') ? 'Show' : 'Hide';
 });
 
-// Auto-scroll Transcript (Optional Enhancement)
-audioPlayer.addEventListener('timeupdate', () => {
-    const paragraphs = transcriptContent.querySelectorAll('p');
-    const currentTime = audioPlayer.currentTime;
-    const duration = audioPlayer.duration;
-    const totalParagraphs = paragraphs.length;
-    
-    // Estimate which paragraph should be highlighted based on time
-    const estimatedParagraphIndex = Math.floor((currentTime / duration) * totalParagraphs);
-    
-    // Remove previous highlights
-    paragraphs.forEach(p => p.classList.remove('highlight'));
-    
-    // Add highlight to current paragraph
-    if (paragraphs[estimatedParagraphIndex]) {
-        paragraphs[estimatedParagraphIndex].classList.add('highlight');
-        
-        // Auto-scroll to highlighted paragraph
-        paragraphs[estimatedParagraphIndex].scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-        });
-    }
-});
-
 // Keyboard Shortcuts
 document.addEventListener('keydown', (e) => {
     // Spacebar: Play/Pause
