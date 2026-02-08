@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Practice - British English</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎤 Presentation Practice</h1>
+            <p class="subtitle">British English - Shionogi Data Science Presentation</p>
+        </header>
+
+        <div class="audio-player">
+            <audio id="audioPlayer" loop>
+                <source src="audio/presentation.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <div class="controls">
+                <button id="playPauseBtn" class="control-btn">
+                    <span class="play-icon">▶️</span>
+                    <span class="pause-icon" style="display: none;">⏸️</span>
+                </button>
+
+                <div class="progress-container">
+                    <div class="time-display">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progress" class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div class="speed-controls">
+                    <label for="speedSelect">Speed:</label>
+                    <select id="speedSelect">
+                        <option value="0.5">0.5x</option>
+                        <option value="0.75">0.75x</option>
+                        <option value="1" selected>1x</option>
+                        <option value="1.25">1.25x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2">2x</option>
+                    </select>
+                </div>
+
+                <button id="restartBtn" class="control-btn secondary">
+                    🔄 Restart
+                </button>
+            </div>
+
+            <div class="loop-indicator">
+                <span class="loop-badge">🔁 Loop Mode Active</span>
+            </div>
+        </div>
+
+        <div class="transcript-section">
+            <div class="transcript-header">
+                <h2>📄 Transcript</h2>
+                <button id="toggleTranscript" class="toggle-btn">Hide</button>
+            </div>
+            <div id="transcript" class="transcript-content">
+                <p>Good morning, and thank you very much for taking the time to meet with us today.</p>
+                
+                <p>My name is Toshihiro Hisasue from the Data Science Department at SHQ in Japan.</p>
+                
+                <p>Today, I would like to share our perspective on global data science at Shionogi and, more importantly, use this opportunity to deepen our mutual understanding across regions.</p>
+                
+                <p>Through this visit, we hope to learn from your experiences, understand your priorities and ways of working, and explore how we can build a strong and collaborative relationship going forward.</p>
+                
+                <p>Let me briefly introduce our organization at Shionogi Headquarters.</p>
+                
+                <p>At SHQ, the Data Science Department operates as an independent organization, separate from the IT department. This allows us to focus on maximizing the value of data across the company.</p>
+                
+                <p>Our department consists of four specialized groups.</p>
+                
+                <p>First, the Data Science Unit focuses on analytics and insights, including hypothesis-driven analysis, real-world evidence, and market forecasting.</p>
+                
+                <p>Second, the Data Engineering Unit is responsible for data platforms and operations, such as data warehouses, data quality, and master data management.</p>
+                
+                <p>Third, the Computer Science Group supports analytical environments and tools, including SAS Viya, R, AWS, and development platforms.</p>
+                
+                <p>Finally, the Generative AI Group leads AI innovation, developing our internal AI applications and establishing governance and education frameworks.</p>
+                
+                <p>Together, these groups work closely across the organization, ensuring high-quality data and analysis while continuously strengthening our expertise.</p>
+                
+                <p>Now, let me briefly explain the background and purpose of this visit.</p>
+                
+                <p>Our objective is to explore how we can build a practical and collaborative framework for global data science that supports your work and creates value together.</p>
+                
+                <p>To do this, we are focusing on three things.</p>
+                
+                <p>First, understanding your current situation—your priorities, challenges, and how data is actually used in your day-to-day work.</p>
+                
+                <p>Second, exploring how SHQ's data science capabilities and resources could support your activities in a way that fits your local workflows.</p>
+                
+                <p>And third, building a partnership based on mutual understanding, where we learn from each other and collaborate flexibly as one global team.</p>
+                
+                <p>Through this visit, we hope to listen, learn, and identify concrete ways to work together going forward.</p>
+                
+                <p>Our vision is captured in this phrase: "Global One Company, Global Data Science."</p>
+                
+                <p>In practice, this means working as partners across regions to maximize the value of data together.</p>
+                
+                <p>This vision is built on three simple pillars.</p>
+                
+                <p>First, Shared Platforms. We aim to make high-performance environments, analytical tools, and data infrastructure available as shared resources. These can be leveraged when useful to reduce operational burden and accelerate work.</p>
+                
+                <p>Second, Collaborative Talent. We envision a global network where experts across regions support one another when needed, sharing knowledge and experience while respecting local decision-making.</p>
+                
+                <p>Third, Common Metrics. By learning from selected shared indicators, we can better understand what works well across regions and apply those insights to improve together.</p>
+                
+                <p>At its core, this vision is about collaboration, learning, and mutual support as one global team.</p>
+                
+                <p>To build this collaborative framework effectively, we would first like to understand your current situation.</p>
+                
+                <p>To guide our discussions, we have identified four priority themes where we hope to learn about your current status and explore collaboration opportunities.</p>
+                
+                <p>First, Analytics Environment. We would like to understand how analytical tools such as SAS Viya, R, and Python are currently used, who the main users are, and what the operational environment looks like. This will help us identify potential optimization or alignment opportunities.</p>
+                
+                <p>Second, Data Warehouse Status and Demand. We want to learn about your existing data warehouse setup, key data domains, and current challenges related to performance, scalability, and BI. We will also explore whether integration with the global Snowflake architecture could be beneficial.</p>
+                
+                <p>Third, Real World Data Management. We would like to understand how RWD is governed and managed, including access, quality control, and organizational responsibilities, and discuss whether greater data visibility across regions could add value.</p>
+                
+                <p>Fourth, Generative AI Usage. We hope to learn about your current use of generative AI, existing guidelines, and potential use cases where AI tools, including SHQ-developed applications, could support your work.</p>
+                
+                <p>These four themes will guide our conversations during this visit.</p>
+                
+                <p>Let me briefly outline the information we hope to understand through our discussions.</p>
+                
+                <p>Our aim is to identify quick wins, as well as opportunities for longer-term alignment.</p>
+                
+                <p>We are looking at this from seven simple perspectives.</p>
+                
+                <p>First, who and when — who is involved in data activities, and at what points data is used in your business processes.</p>
+                
+                <p>Second, what data — the types of data you work with, key sources, and update frequency.</p>
+                
+                <p>Third, why — the business objectives and decision-making needs that data supports.</p>
+                
+                <p>Fourth, how — the tools, methods, and infrastructure currently in use.</p>
+                
+                <p>Fifth, challenges and needs — areas where you see gaps or constraints today.</p>
+                
+                <p>Sixth, SHQ collaboration — where support from HQ could be most helpful.</p>
+                
+                <p>And finally, compliance and regulations — local requirements that we should be aware of from the outset.</p>
+                
+                <p>These perspectives will help us form a clear and practical picture of how we can work together.</p>
+                
+                <p>Now let me briefly introduce what our Data Science Group can offer.</p>
+                
+                <p>At SHQ, this group focuses on generating insights through data. Their work includes hypothesis-driven analytics, real-world evidence generation, business intelligence, and predictive modeling across the value chain.</p>
+                
+                <p>From a global perspective, they can support you in four key ways.</p>
+                
+                <p>First, RWE support, including study design and execution based on global best practices.</p>
+                
+                <p>Second, model and method sharing, enabling teams to reuse analytical approaches and accelerate local analysis.</p>
+                
+                <p>Third, BI standardization, by providing common dashboard templates and visualization guidelines.</p>
+                
+                <p>And fourth, collaborative development, through shared code repositories and joint development of analytical assets.</p>
+                
+                <p>The goal is to enable your teams to generate faster, more consistent, and more actionable insights.</p>
+                
+                <p>Next, let me introduce the Data Engineering Group.</p>
+                
+                <p>This group focuses on building and maintaining the data foundation that enables analytics across the organization, including data integration, infrastructure, governance, and data quality management.</p>
+                
+                <p>From a global perspective, they can support you in four key areas.</p>
+                
+                <p>First, data visibility and catalogs, through the deployment of the SERENDA data catalog with multilingual support.</p>
+                
+                <p>Second, data platform architecture, including the design and support of a global Snowflake-based data warehouse, where appropriate.</p>
+                
+                <p>Third, standardized data pipelines, by providing ETL templates and best practices to streamline data integration.</p>
+                
+                <p>And fourth, data quality and master data, through common quality frameworks and master data management integration.</p>
+                
+                <p>Their goal is to provide a robust, scalable, and governed data foundation that every team can rely on with confidence.</p>
+                
+                <p>Next, let me introduce the Computer Science Group.</p>
+                
+                <p>This group provides the technical foundation that enables data scientists to work efficiently, focusing on analytical environments, infrastructure, and advanced technologies.</p>
+                
+                <p>From a global perspective, they can support you in four key areas.</p>
+                
+                <p>First, environment standardization, ensuring consistent analytical environments such as SAS Viya and RStudio across regions.</p>
+                
+                <p>Second, code management and collaboration, by establishing common GitHub and GitLab standards and review processes.</p>
+                
+                <p>Third, shared cloud infrastructure, including global AWS account strategies, security baselines, and shared resource models.</p>
+                
+                <p>And fourth, common analytical libraries, enabling code reuse and improved quality across teams.</p>
+                
+                <p>Their goal is to provide a scalable, secure, and modern technical foundation, so data scientists can focus on insights rather than infrastructure.</p>
+                
+                <p>Finally, let me introduce our Generative AI Group.</p>
+                
+                <p>This group focuses on enabling innovation through generative AI, while ensuring safe, responsible, and compliant usage across the organization.</p>
+                
+                <p>From a global perspective, they can support you in four key areas.</p>
+                
+                <p>First, global deployment of AI tools, including SHIONOGI's proprietary AI applications, SHAPPs, with multilingual support.</p>
+                
+                <p>Second, AI governance and security, by establishing common standards and guidelines to ensure compliant and trustworthy AI usage across regions.</p>
+                
+                <p>Third, AI literacy and enablement, through training programs that help teams effectively use generative AI, including prompt engineering.</p>
+                
+                <p>And fourth, knowledge sharing, by creating platforms to share AI use cases and best practices globally.</p>
+                
+                <p>Their mission is to empower teams worldwide to use AI confidently and responsibly, turning innovation into real business value.</p>
+                
+                <p>Finally, I'd like to briefly share one possible way we could move forward together.</p>
+                
+                <p>This is just an initial idea, but we imagine a light communication structure, with regular touchpoints to stay aligned and share progress, supported by day-to-day collaboration when needed.</p>
+                
+                <p>In terms of timing, we are thinking about starting with listening and small pilots this year, then gradually expanding what works, and moving into more stable operations over time.</p>
+                
+                <p>This is not a fixed plan, but simply a starting point for discussion, and we would very much like to shape it together with you.</p>
+                
+                <p>Let me close with a final thought.</p>
+                
+                <p>Our goal is to work toward Global One Company, Global Data Science through steady and practical collaboration.</p>
+                
+                <p>This visit is an opportunity for us to better understand your current situation, learn from your experience, and explore how we can support each other more effectively going forward.</p>
+                
+                <p>Thank you very much for taking the time to meet with us today. We would greatly appreciate hearing your candid thoughts and perspectives through our discussions.</p>
+                
+                <p>We look forward to continuing our conversations over the coming days and building a strong working relationship together.</p>
+                
+                <p>I would now be happy to take your questions. Thank you very much.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>💡 Tip: Use the speed control to practice at different paces. The audio will loop automatically.</p>
+            <p class="credit">Created for Shionogi Presentation Practice</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
